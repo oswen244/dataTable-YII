@@ -69,26 +69,11 @@
             });
 
 
-            $.ajax({
-                url: 'update',
-                type: 'post',
-                data: {data: 'value1'},
-            })
-            .done(function(data) {
-                console.log("me devolviste "+data);
-            })
-            .fail(function() {
-                console.log("error");
-            })
-            .always(function() {
-                console.log("complete");
-            });
-            
 
-            // $.post("update", {data: "miArray"}, function(data) {
-            //     alert(data);
-            //     // success(data);
-            // });
+            $.post("update", {data: miArray}, function(data) {
+                alert(data);
+                // success(data);
+            });
 
         });
 

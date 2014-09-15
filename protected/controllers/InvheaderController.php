@@ -15,26 +15,30 @@ class InvheaderController extends Controller
 	}
 
 
-	public function beforeAction($action){
-		$this->enableCsrfValidation = false;
-		return parent::beforeAction($action);
-	}
 
-	public function actionUpdate($data)
+	public function actionUpdate()
 	{		
+		$data = $_POST['data'];
+		if(Yii::app()->request->isPostRequest){
 
-		if(isset($_POST['data'])){
-			return	$data;
-		}else{
-			return "Entró al else";
-		}
+			// $model = $this->loadModel($data[0]);
+
+			// $model->attributes= $data;
+
+			$model = Invheader::model()->findByPk($data[0]);
+			$model->tax=$val[4];
+			$model->update();
+			// if($model->save())
+				echo "Actualizado";
+
+
+   		 // echo json_encode($_POST['data']);
+
+ 		} else {
+  			  echo 'you are not allowed';
+ 		}
 		
-		// $model = $this->loadModel($data[0]);
-
-		// $model->attributes= $data;
-
-		// if($model->save())
-		// 	$this->redirect(array('index','id'=>$model->id ));
+		
 		
 		// $campo = Invheader::model()->find($data[0]);
 
