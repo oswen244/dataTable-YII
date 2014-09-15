@@ -1,0 +1,355 @@
+2014/09/12 16:53:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to find the code you requested.' in C:\xampp\htdocs\yii-test\framework\gii\CCodeGenerator.php:90
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionCode()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#3 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): CController->run('code')
+#5 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/model/code')
+#6 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\testdrive\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/testdrive/index.php?r=gii/model/code&id=0
+HTTP_REFERER=http://localhost/testdrive/index.php?r=gii/model/index
+---
+2014/09/12 23:05:00 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1049] Unknown database 'invheader'' in C:\xampp\htdocs\yii-test\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\yii-test\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\yii-test\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\yii-test\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 C:\xampp\htdocs\yii-test\framework\gii\generators\model\ModelCode.php(60): CModule->__get('db')
+#5 C:\xampp\htdocs\yii-test\framework\web\CFormModel.php(39): ModelCode->init()
+#6 C:\xampp\htdocs\yii-test\framework\gii\CCodeGenerator.php(153): CFormModel->__construct()
+#7 C:\xampp\htdocs\yii-test\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): CController->run('index')
+#13 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/model/index')
+#14 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\testdrive\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/testdrive/gii/model/index
+HTTP_REFERER=http://localhost/testdrive/gii/model/index
+---
+2014/09/12 23:05:30 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1049] Unknown database 'invheader'' in C:\xampp\htdocs\yii-test\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\yii-test\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\yii-test\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\yii-test\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 C:\xampp\htdocs\yii-test\framework\gii\generators\model\ModelCode.php(60): CModule->__get('db')
+#5 C:\xampp\htdocs\yii-test\framework\web\CFormModel.php(39): ModelCode->init()
+#6 C:\xampp\htdocs\yii-test\framework\gii\CCodeGenerator.php(153): CFormModel->__construct()
+#7 C:\xampp\htdocs\yii-test\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): CController->run('index')
+#13 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/model/index')
+#14 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\testdrive\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/testdrive/gii/model/index
+---
+2014/09/12 23:05:59 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1049] Unknown database 'invheader'' in C:\xampp\htdocs\yii-test\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\yii-test\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\yii-test\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\yii-test\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 C:\xampp\htdocs\yii-test\framework\gii\generators\model\ModelCode.php(60): CModule->__get('db')
+#5 C:\xampp\htdocs\yii-test\framework\web\CFormModel.php(39): ModelCode->init()
+#6 C:\xampp\htdocs\yii-test\framework\gii\CCodeGenerator.php(153): CFormModel->__construct()
+#7 C:\xampp\htdocs\yii-test\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): CController->run('index')
+#13 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/model/index')
+#14 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\testdrive\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/testdrive/gii/model/index
+HTTP_REFERER=http://localhost/testdrive/gii/controller/index
+---
+2014/09/12 23:06:08 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1049] Unknown database 'invheader'' in C:\xampp\htdocs\yii-test\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\yii-test\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\yii-test\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\yii-test\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 C:\xampp\htdocs\yii-test\framework\gii\generators\model\ModelCode.php(60): CModule->__get('db')
+#5 C:\xampp\htdocs\yii-test\framework\web\CFormModel.php(39): ModelCode->init()
+#6 C:\xampp\htdocs\yii-test\framework\gii\CCodeGenerator.php(153): CFormModel->__construct()
+#7 C:\xampp\htdocs\yii-test\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): CController->run('index')
+#13 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/model/index')
+#14 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\testdrive\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/testdrive/gii/model/index
+HTTP_REFERER=http://localhost/testdrive/gii/controller/index
+---
+2014/09/12 23:12:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "inveader/index"' in C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController('inveader/index')
+#1 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\testdrive\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testdrive/inveader/index
+---
+2014/09/12 23:44:03 [error] [php] Array to string conversion (C:\xampp\htdocs\testdrive\protected\views\invheader\index.php:21)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(869): InvheaderController->renderFile()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(782): InvheaderController->renderPartial()
+#2 C:\xampp\htdocs\testdrive\protected\controllers\InvheaderController.php(9): InvheaderController->render()
+#3 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): InvheaderController->actionIndex()
+#4 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): InvheaderController->runAction()
+#6 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): InvheaderController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): InvheaderController->run()
+#8 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/testdrive/invheader/index
+in C:\xampp\htdocs\testdrive\protected\views\invheader\index.php (21)
+in C:\xampp\htdocs\testdrive\protected\controllers\InvheaderController.php (9)
+in C:\xampp\htdocs\testdrive\index.php (13)
+2014/09/12 23:47:12 [error] [php] Array to string conversion (C:\xampp\htdocs\testdrive\protected\views\invheader\index.php:20)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(869): InvheaderController->renderFile()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(782): InvheaderController->renderPartial()
+#2 C:\xampp\htdocs\testdrive\protected\controllers\InvheaderController.php(9): InvheaderController->render()
+#3 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): InvheaderController->actionIndex()
+#4 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): InvheaderController->runAction()
+#6 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): InvheaderController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): InvheaderController->run()
+#8 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/testdrive/invheader/index
+in C:\xampp\htdocs\testdrive\protected\views\invheader\index.php (20)
+in C:\xampp\htdocs\testdrive\protected\controllers\InvheaderController.php (9)
+in C:\xampp\htdocs\testdrive\index.php (13)
+2014/09/12 23:52:16 [error] [php] Array to string conversion (C:\xampp\htdocs\testdrive\protected\views\invheader\index.php:20)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(869): InvheaderController->renderFile()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(782): InvheaderController->renderPartial()
+#2 C:\xampp\htdocs\testdrive\protected\controllers\InvheaderController.php(9): InvheaderController->render()
+#3 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): InvheaderController->actionIndex()
+#4 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): InvheaderController->runAction()
+#6 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): InvheaderController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): InvheaderController->run()
+#8 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/testdrive/invheader/index
+in C:\xampp\htdocs\testdrive\protected\views\invheader\index.php (20)
+in C:\xampp\htdocs\testdrive\protected\controllers\InvheaderController.php (9)
+in C:\xampp\htdocs\testdrive\index.php (13)
+2014/09/12 23:54:31 [error] [php] Array to string conversion (C:\xampp\htdocs\testdrive\protected\views\invheader\index.php:19)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(869): InvheaderController->renderFile()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(782): InvheaderController->renderPartial()
+#2 C:\xampp\htdocs\testdrive\protected\controllers\InvheaderController.php(9): InvheaderController->render()
+#3 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): InvheaderController->actionIndex()
+#4 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): InvheaderController->runAction()
+#6 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): InvheaderController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): InvheaderController->run()
+#8 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/testdrive/invheader/index
+in C:\xampp\htdocs\testdrive\protected\views\invheader\index.php (19)
+in C:\xampp\htdocs\testdrive\protected\controllers\InvheaderController.php (9)
+in C:\xampp\htdocs\testdrive\index.php (13)
+2014/09/12 23:54:58 [error] [php] Array to string conversion (C:\xampp\htdocs\testdrive\protected\views\invheader\index.php:19)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(869): InvheaderController->renderFile()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(782): InvheaderController->renderPartial()
+#2 C:\xampp\htdocs\testdrive\protected\controllers\InvheaderController.php(9): InvheaderController->render()
+#3 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): InvheaderController->actionIndex()
+#4 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): InvheaderController->runAction()
+#6 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): InvheaderController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): InvheaderController->run()
+#8 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/testdrive/invheader/index
+in C:\xampp\htdocs\testdrive\protected\views\invheader\index.php (19)
+in C:\xampp\htdocs\testdrive\protected\controllers\InvheaderController.php (9)
+in C:\xampp\htdocs\testdrive\index.php (13)
+2014/09/12 23:59:38 [error] [php] Array to string conversion (C:\xampp\htdocs\testdrive\protected\views\invheader\index.php:19)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(869): InvheaderController->renderFile()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(782): InvheaderController->renderPartial()
+#2 C:\xampp\htdocs\testdrive\protected\controllers\InvheaderController.php(9): InvheaderController->render()
+#3 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): InvheaderController->actionIndex()
+#4 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): InvheaderController->runAction()
+#6 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): InvheaderController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): InvheaderController->run()
+#8 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/testdrive/invheader/index
+in C:\xampp\htdocs\testdrive\protected\views\invheader\index.php (19)
+in C:\xampp\htdocs\testdrive\protected\controllers\InvheaderController.php (9)
+in C:\xampp\htdocs\testdrive\index.php (13)
+2014/09/13 00:01:04 [error] [php] Array to string conversion (C:\xampp\htdocs\testdrive\protected\views\invheader\index.php:21)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(869): InvheaderController->renderFile()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(782): InvheaderController->renderPartial()
+#2 C:\xampp\htdocs\testdrive\protected\controllers\InvheaderController.php(9): InvheaderController->render()
+#3 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): InvheaderController->actionIndex()
+#4 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): InvheaderController->runAction()
+#6 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): InvheaderController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): InvheaderController->run()
+#8 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/testdrive/invheader/index
+in C:\xampp\htdocs\testdrive\protected\views\invheader\index.php (21)
+in C:\xampp\htdocs\testdrive\protected\controllers\InvheaderController.php (9)
+in C:\xampp\htdocs\testdrive\index.php (13)
+2014/09/13 00:02:10 [error] [php] Array to string conversion (C:\xampp\htdocs\testdrive\protected\views\invheader\index.php:21)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(869): InvheaderController->renderFile()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(782): InvheaderController->renderPartial()
+#2 C:\xampp\htdocs\testdrive\protected\controllers\InvheaderController.php(9): InvheaderController->render()
+#3 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): InvheaderController->actionIndex()
+#4 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): InvheaderController->runAction()
+#6 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): InvheaderController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): InvheaderController->run()
+#8 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/testdrive/invheader/index
+in C:\xampp\htdocs\testdrive\protected\views\invheader\index.php (21)
+in C:\xampp\htdocs\testdrive\protected\controllers\InvheaderController.php (9)
+in C:\xampp\htdocs\testdrive\index.php (13)
+2014/09/13 00:03:47 [error] [php] Array to string conversion (C:\xampp\htdocs\testdrive\protected\views\invheader\index.php:22)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(869): InvheaderController->renderFile()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(782): InvheaderController->renderPartial()
+#2 C:\xampp\htdocs\testdrive\protected\controllers\InvheaderController.php(9): InvheaderController->render()
+#3 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): InvheaderController->actionIndex()
+#4 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): InvheaderController->runAction()
+#6 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): InvheaderController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): InvheaderController->run()
+#8 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/testdrive/invheader/index
+in C:\xampp\htdocs\testdrive\protected\views\invheader\index.php (22)
+in C:\xampp\htdocs\testdrive\protected\controllers\InvheaderController.php (9)
+in C:\xampp\htdocs\testdrive\index.php (13)
+2014/09/13 00:04:55 [error] [php] json_decode() expects parameter 1 to be string, array given (C:\xampp\htdocs\testdrive\protected\views\invheader\index.php:21)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(95): InvheaderController->renderInternal()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(869): InvheaderController->renderFile()
+#2 C:\xampp\htdocs\yii-test\framework\web\CController.php(782): InvheaderController->renderPartial()
+#3 C:\xampp\htdocs\testdrive\protected\controllers\InvheaderController.php(9): InvheaderController->render()
+#4 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): InvheaderController->actionIndex()
+#5 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): InvheaderController->runAction()
+#7 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): InvheaderController->runActionWithFilters()
+#8 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): InvheaderController->run()
+#9 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/testdrive/invheader/index
+in C:\xampp\htdocs\testdrive\protected\views\invheader\index.php (21)
+in C:\xampp\htdocs\testdrive\protected\controllers\InvheaderController.php (9)
+in C:\xampp\htdocs\testdrive\index.php (13)
+2014/09/13 00:37:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "invheader" solicitada.' in C:\xampp\htdocs\yii-test\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(270): CController->missingAction('invheader')
+#1 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): CController->run('invheader')
+#2 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController('invheader/invhe...')
+#3 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\testdrive\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/testdrive/invheader/invheader/index
+HTTP_REFERER=http://localhost/testdrive/invheader/index
+---
+2014/09/13 00:37:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "invheader" solicitada.' in C:\xampp\htdocs\yii-test\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(270): CController->missingAction('invheader')
+#1 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): CController->run('invheader')
+#2 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController('invheader/invhe...')
+#3 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\testdrive\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/testdrive/invheader/invheader/index
+HTTP_REFERER=http://localhost/testdrive/invheader/index
+---
+2014/09/15 15:18:36 [error] [php] Undefined variable: inv (C:\xampp\htdocs\testdrive\protected\views\invheader\index.php:36)
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\web\CController.php(869): InvheaderController->renderFile()
+#1 C:\xampp\htdocs\yii-test\framework\web\CController.php(782): InvheaderController->renderPartial()
+#2 C:\xampp\htdocs\testdrive\protected\controllers\InvheaderController.php(9): InvheaderController->render()
+#3 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): InvheaderController->actionIndex()
+#4 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): InvheaderController->runAction()
+#6 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): InvheaderController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): InvheaderController->run()
+#8 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/testdrive/invheader/index
+in C:\xampp\htdocs\testdrive\protected\views\invheader\index.php (36)
+in C:\xampp\htdocs\testdrive\protected\controllers\InvheaderController.php (9)
+in C:\xampp\htdocs\testdrive\index.php (13)
+2014/09/15 15:21:14 [error] [exception.CException] exception 'CException' with message 'Invheader y sus behaviors no tienen un método o closure llamado "all".' in C:\xampp\htdocs\yii-test\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\yii-test\framework\db\ar\CActiveRecord.php(227): CComponent->__call('all', Array)
+#1 C:\xampp\htdocs\testdrive\protected\controllers\InvheaderController.php(8): CActiveRecord->__call('all', Array)
+#2 C:\xampp\htdocs\testdrive\protected\controllers\InvheaderController.php(8): Invheader->all()
+#3 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): InvheaderController->actionIndex()
+#4 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): CController->run('index')
+#8 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController('invheader/index')
+#9 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\testdrive\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/testdrive/invheader/index
+---
+2014/09/15 15:29:10 [error] [php] include(Cjson.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii-test\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\testdrive\protected\views\invheader\index.php(36): spl_autoload_call()
+#1 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(126): require()
+#2 C:\xampp\htdocs\yii-test\framework\web\CBaseController.php(95): InvheaderController->renderInternal()
+#3 C:\xampp\htdocs\yii-test\framework\web\CController.php(869): InvheaderController->renderFile()
+#4 C:\xampp\htdocs\yii-test\framework\web\CController.php(782): InvheaderController->renderPartial()
+#5 C:\xampp\htdocs\testdrive\protected\controllers\InvheaderController.php(9): InvheaderController->render()
+#6 C:\xampp\htdocs\yii-test\framework\web\actions\CInlineAction.php(49): InvheaderController->actionIndex()
+#7 C:\xampp\htdocs\yii-test\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\xampp\htdocs\yii-test\framework\web\CController.php(286): InvheaderController->runAction()
+#9 C:\xampp\htdocs\yii-test\framework\web\CController.php(265): InvheaderController->runActionWithFilters()
+#10 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(282): InvheaderController->run()
+#11 C:\xampp\htdocs\yii-test\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\yii-test\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\testdrive\index.php(13): CWebApplication->run()
+REQUEST_URI=/testdrive/invheader/index
+in C:\xampp\htdocs\testdrive\protected\views\invheader\index.php (36)
+in C:\xampp\htdocs\testdrive\protected\controllers\InvheaderController.php (9)
+in C:\xampp\htdocs\testdrive\index.php (13)
