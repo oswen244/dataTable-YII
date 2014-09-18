@@ -2,6 +2,25 @@
 
 class InvheaderController extends Controller
 {
+	
+
+		public function actions()
+	{
+		return array(
+			// captcha action renders the CAPTCHA image displayed on the contact page
+			'captcha'=>array(
+				'class'=>'CCaptchaAction',
+				'backColor'=>0xFFFFFF,
+			),
+			// page action renders "static" pages stored under 'protected/views/site/pages'
+			// They can be accessed via: index.php?r=site/page&view=FileName
+			'page'=>array(
+				'class'=>'CViewAction',
+			),
+		);
+	}
+
+
 	public function actionIndex()
 	{
 
@@ -18,42 +37,101 @@ class InvheaderController extends Controller
 
 	public function actionUpdate()
 	{		
-		$data = $_POST['data'];
 		if(Yii::app()->request->isPostRequest){
+			$data = $_POST['data'];
 
-			// $model = $this->loadModel($data[0]);
 
-			// $model->attributes= $data;
+			$modelo = Invheader::model()->findByPk($data[0]);
+			$modelo->invdate=$data[1];
+			$modelo->client_id=$data[2];
+			$modelo->amount=$data[3];
+			$modelo->tax=$data[4];
+			$modelo->total=$data[5];
+			$modelo->note=$data[6];
+			$modelo->update();
 
-			$model = Invheader::model()->findByPk($data[0]);
-			$model->tax=$val[4];
-			$model->update();
-			// if($model->save())
+			if($modelo->save())
 				echo "Actualizado";
-
-
-   		 // echo json_encode($_POST['data']);
 
  		} else {
   			  echo 'you are not allowed';
  		}
-		
-		
-		
-		// $campo = Invheader::model()->find($data[0]);
-
-		// $actualizar = Invheader::model()->updateByPk(model)
-
-		// $campo->invdate = $data[1];
-		// $campo->client_id=$val[2];
-  //   	$campo->amount=$val[3];
-  //   	$campo->tax=$val[4];
-  //   	$campo->total=$val[5];
-  //   	$campo->note=$val[6];
-
-  //   	$campo->save();
-
+			
 	}
+
+
+	public function actionError()
+	{
+		if($error=Yii::app()->errorHandler->error)
+		{
+			if(Yii::app()->request->isAjaxRequest)
+				echo $error['message'];
+			else
+				$this->render('error', $error);
+		}
+	}
+
+	/**
+	 * Displays the contact page
+	 */
+	public function actionContact()
+	{
+		$model=new ContactForm;
+		if(isset($_POST['ContactForm']))
+		{
+			$model->attributes=$_POST['ContactForm'];
+			if($model->validate())
+			{
+				$name='=?UTF-8?B?'.base64_encode($model->name).'?=';
+				$subject='=?UTF-8?B?'.base64_encode($model->subject).'?=';
+				$headers="From: $name <{$model->email}>\r\n".
+					"Reply-To: {$model->email}\r\n".
+					"MIME-Version: 1.0\r\n".
+					"Content-Type: text/plain; charset=UTF-8";
+
+				mail(Yii::app()->params['adminEmail'],$subject,$model->body,$headers);
+				Yii::app()->user->setFlash('contact','Thank you for contacting us. We will respond to you as soon as possible.');
+				$this->refresh();
+			}
+		}
+		$this->render('contact',array('model'=>$model));
+	}
+
+	/**
+	 * Displays the login page
+	 */
+	public function actionLogin()
+	{
+		$model=new LoginForm;
+
+		// if it is ajax validation request
+		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
+		{
+			echo CActiveForm::validate($model);
+			Yii::app()->end();
+		}
+
+		// collect user input data
+		if(isset($_POST['LoginForm']))
+		{
+			$model->attributes=$_POST['LoginForm'];
+			// validate user input and redirect to the previous page if valid
+			if($model->validate() && $model->login())
+				$this->redirect(Yii::app()->user->returnUrl);
+		}
+		// display the login form
+		$this->render('login',array('model'=>$model));
+	}
+
+	/**
+	 * Logs out the current user and redirect to homepage.
+	 */
+	public function actionLogout()
+	{
+		Yii::app()->user->logout();
+		$this->redirect('/testdrive/invheader/');
+	}
+
 
 	// Uncomment the following methods and override them if needed
 	/*
